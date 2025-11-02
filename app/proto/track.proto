@@ -1,0 +1,25 @@
+syntax = "proto3";
+package TrackProtobuf;
+
+message DistributionTrack {
+  string uniqueid = 1;
+  int32  trackid = 2;
+  int64  senderid = 3;
+  uint32 channelid = 4;
+  double speedmps = 5;
+  double coursedegrees = 6;
+  int32  classification = 7;      // 1:Unclassified, 2:Vehicle, 4:Person, 8:Debris, 16:Airplane, 32:Boat
+  double classificationprobability = 8;
+  double xposition = 9;
+  double yposition = 10;
+  double latitude = 11;
+  double longitude = 12;
+  string tag = 13;
+  double sizeinaz = 14;
+  double sizeinrange = 15;
+  uint32 seen = 16;
+  int32  coasts = 17;
+  int64  laneuserid = 18;
+  int64  sectionuserid = 19;
+  string carriagewayname = 20;
+}
